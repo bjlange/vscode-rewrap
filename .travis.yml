@@ -12,4 +12,8 @@ install:
   - node --version
   - npm --version
   - npm install
-  - npm run vscode:prepublish --silent
+
+script:
+  - echo Compiling...
+  - node ./node_modules/vscode/bin/compile
+  - echo Compiled
