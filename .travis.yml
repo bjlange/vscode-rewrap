@@ -17,3 +17,6 @@ script:
   - echo Compiling...
   - node ./node_modules/vscode/bin/compile
   - echo Compiled
+  - echo Testing...
+  - node ./node_modules/vscode/bin/test
+  - echo Tested
