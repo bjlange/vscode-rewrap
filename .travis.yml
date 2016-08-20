@@ -7,7 +7,7 @@ node_js:
 os:
   - osx
   - linux
-  
+
 before_install:
   - if [ $TRAVIS_OS_NAME == "linux" ]; then
       export CXX="g++-4.9" CC="gcc-4.9" DISPLAY=:99.0;
@@ -21,9 +21,4 @@ install:
   - npm install
 
 script:
-  - echo Compiling...
-  - node ./node_modules/vscode/bin/compile
-  - echo Compiled
-  - echo Testing...
-  - node ./node_modules/vscode/bin/test
-  - echo Tested
+  - npm run vscode:prepublish
